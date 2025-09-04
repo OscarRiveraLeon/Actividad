@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondrian</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100vw;
+            height: 100vh;
+        }
+        td {
+            border: 8px solid black;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .white {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mondrian</h1>
+
+    <table>
+        <tr>
+            <td class="red" rowspan="2"></td>
+            <td class="white" colspan="2"></td>
+            <td class="blue" rowspan="3"></td>
+        </tr>
+        <tr>
+            <td class="yellow"></td>
+            <td class="white"></td>
+        </tr>
+        <tr>
+            <td class="white"></td>
+            <td class="red" colspan="2"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
+<style>
+  .hr-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  hr {
+    width: 50%;
+    border: 1px solid black;
+  }
