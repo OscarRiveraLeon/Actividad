@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de Bootstrap - Completo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Mi Demo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Productos</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5">
+    <h1 class="text-center">Demo</h1>
+    <p class="text-center text-muted">Componentes.</p>
+    
+    <hr class="my-5">
+    
+    <div class="row g-4 mb-5">
+        
+        <div class="col-lg-6">
+            <h2 class="h4">Accordion</h2>
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Pregunta #1
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Respuesta a la pregunta #1.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Pregunta #2
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Respuesta a la pregunta #2.
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <h2 class="h4">Botones y Grupos</h2>
+            <div class="mb-3">
+              <button type="button" class="btn btn-primary">Botón Principal</button>
+              <button type="button" class="btn btn-success">Botón Grande</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Grupo de botones básicos">
+              <button type="button" class="btn btn-secondary">Izquierda</button>
+              <button type="button" class="btn btn-secondary">Medio</button>
+              <button type="button" class="btn btn-secondary">Derecha</button>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+            <h2 class="h4">Tarjeta</h2>
+            <div class="card w-100">
+              <img src="https://via.placeholder.com/286x180" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Título de la Tarjeta</h5>
+                <p class="card-text">Un ejemplo de texto para la tarjeta.</p>
+                <a href="#" class="btn btn-primary">Ir a algún lugar</a>
+              </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4">
+            <h2 class="h4">Modal</h2>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Lanzar modal
+            </button>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <h2 class="h4">Popover & Tooltip</h2>
+            <button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Título" data-bs-content="BANANIN PIN PIN.">
+              Popover
+            </button>
+            <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="HOlaaaa MOYAAA y CASTILLO">
+              Soy un tooltip
+            </button>
+        </div>
+        
+        <div class="col-md-6">
+            <h2 class="h4">Barra de Progreso y Spinners</h2>
+            <div class="progress mb-3">
+              <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+            </div>
+            <div class="spinner-border text-primary" role="status">
+              <span class="visually-hidden">Cargando...</span>
+            </div>
+            <div class="spinner-grow text-secondary" role="status">
+              <span class="visually-hidden">Cargando...</span>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <h2 class="h4">Etiquetas Flotantes</h2>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Correo electrónico</label>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <h2 class="h4">Bordes y Fondos</h2>
+            <div class="p-3 mb-2 bg-primary text-white border border-secondary rounded">
+              Elemento con fondo primario y borde secundario.
+            </div>
+            <div class="p-3 mb-2 bg-dark text-white border-top border-warning">
+              Elemento con borde superior amarillo.
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <h2 class="h4">Enlace Icónico</h2>
+            <a class="icon-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+                Ir a la página
+            </a>
+        </div>
+        
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row g-4 mb-5">
+        
+        <div class="col-lg-6">
+            <h2 class="h4">Insignias y Acciones</h2>
+            <div class="d-flex align-items-center mb-3">
+                <img src="C:\Users\Juan Pablo\OneDrive\Documents\Tercer semestre\Programacion web\com111-class-main\com111-class-main\Portfolio\04-BootstrapShowcase\User_icon_2.svg.png" class="rounded-circle me-3" alt="Imagen de perfil">
+                <h5>Usuario 1</h5>
+                <span class="badge rounded-pill text-bg-info ms-3">Nuevo</span>
+            </div>
+            <a href="#" class="btn btn-dark position-relative">
+                Notificaciones
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    99+
+                    <span class="visually-hidden">mensajes no leídos</span>
+                </span>
+            </a>
+        </div>
+
+        <div class="col-lg-6">
+            <h2 class="h4">Carrusel</h2>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="C:\Users\Juan Pablo\OneDrive\Documents\Tercer semestre\Programacion web\com111-class-main\com111-class-main\Portfolio\04-BootstrapShowcase\sheet546475_1920.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Primer título del slide</h5>
+                            <p>Algún texto representativo para el primer slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="C:\Users\Juan Pablo\OneDrive\Documents\Tercer semestre\Programacion web\com111-class-main\com111-class-main\Portfolio\04-BootstrapShowcase\sheet546475_1920.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Segundo título del slide</h5>
+                            <p>Algún texto representativo para el segundo slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="p-5 text-center bg-body-tertiary rounded-3">
+                <h1 class="text-body-emphasis">Título Principal de la Página</h1>
+                <p class="col-lg-8 mx-auto fs-5 text-muted">
+                    Que?.
+                </p>
+                <div class="d-inline-flex gap-2 mb-5">
+                    <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                        Llamada a la acción
+                    </button>
+                    <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+                        Acción secundaria
+                    </button>
+                </div>
+                <div class="overflow-hidden" style="max-height: 30vh;">
+                    <div class="container px-5">
+                        <img src="C:\Users\Juan Pablo\OneDrive\Documents\Tercer semestre\Programacion web\com111-class-main\com111-class-main\Portfolio\04-BootstrapShowcase\User_icon_2.svg.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Ejemplo de captura de pantalla" width="700" height="400" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Título del Modal</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Contenido del modal.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container text-center">
+    <span class="text-muted">Hola amigos, soy un pie de pagina. LOL</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<script>
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+  })
+
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+</script>
+
+</body>
+</html>
